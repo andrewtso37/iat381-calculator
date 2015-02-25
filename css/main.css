@@ -32,21 +32,10 @@ input, button{
 	font: 32px Arial, sans-serif;
 }
 
-.button-size1-left{
-	width: 33.3%;
-	height: 60px;
-	font: 32px Arial, sans-serif;
-}
 
 .button-size2{
 	width: 25%;
 	height: 60px;
 	margin-left: 8px;
-	font: 28px Arial, sans-serif;
-}
-
-.button-size2-left{
-	width: 25%;
-	height: 60px;
 	font: 28px Arial, sans-serif;
 }
