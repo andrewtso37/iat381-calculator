@@ -39,3 +39,10 @@ input, button{
 	margin-left: 8px;
 	font: 28px Arial, sans-serif;
 }
+
+#myElement {
+  background: lightgrey;
+  height: 150px;
+  text-align: center;
+  font: 30px/300px Helvetica, Arial, sans-serif;
+}
