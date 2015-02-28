@@ -6,25 +6,23 @@ function e() { try { s(eval(document.getElementById('res').value)) } catch(e) { 
 // hammer js
 var myElement = document.getElementById('myElement');
 
-// create a simple instance
-// by default, it only adds horizontal recognizers
 var mc = new Hammer(myElement);
 
-mc.get('swipe').set({direction: Hammer.DIRECTION_ALL, velocity:1, threshold:1});
+mc.get('swipe').set({direction: Hammer.DIRECTION_ALL, velocity:0.1, threshold:1});
 
 // listen to events...
-mc.on("swipeup", function(ev) {
+mc.on('swipeup', function(e) {
     myElement.textContent = a('+');
 });
 
-mc.on("swipedown", function(ev) {
+mc.on('swipedown', function(e) {
     myElement.textContent = a('-');
 });
 
-mc.on("swipeleft", function(ev) {
+mc.on('swipeleft', function(e) {
     myElement.textContent = a('*');
 });
 
-mc.on("swiperight", function(ev) {
+mc.on('swiperight', function(e) {
     myElement.textContent = a('/');
 });
