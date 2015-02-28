@@ -9,8 +9,9 @@
 
 <body>
 	<form class="grid">
-		<p>
-			<input type="text" name="res" id="res" class="input-display">
+		<p class="button-display">
+			<input type="text" name="res" id="res" class="input-display" onclick="s('')">
+			<button type="button" class="button-backspace" onclick="backspace()"><-</button>
 		</p>
 		
 		<script src="js/hammer.min.js"></script>
@@ -40,14 +41,14 @@
 
 		<p class="button-display">
 			<button type="button" class="button-size1" onclick="a('1')">1</button>
-			<button type="button" class="button-size1"onclick="a('2')">2</button>
-			<button type="button" class="button-size1"onclick="a('3')">3</button>
+			<button type="button" class="button-size1" onclick="a('2')">2</button>
+			<button type="button" class="button-size1" onclick="a('3')">3</button>
 		</p>
 
 		<p class="button-display">
-			<button type="button" class="button-size1"onclick="a('0')">0</button>
-			<button type="button" class="button-size1"onclick="a('.')">.</button>
-			<button type="button" class="button-size1"onclick="e()">=</button>
+			<button type="button" class="button-size1" onclick="a('0')">0</button>
+			<button type="button" class="button-size1" onclick="a('.')">.</button>
+			<button type="button" class="button-size1" onclick="e()">=</button>
 		</p>
 
 		<p class="button-display">
