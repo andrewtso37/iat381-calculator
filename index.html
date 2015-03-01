@@ -9,13 +9,14 @@
 
 <body>
 	<form class="grid">
-		<p>
-			<input type="text" name="res" id="res" class="input-display">
+		<div id="clearElement"></div> 
+		<p class="button-display">
+			<input type="text" name="res" id="res" class="input-display" onclick="s('')">
+			<button type="button" class="button-backspace" onclick="backspace()"><-</button>
 		</p>
 		
-		<script src="js/hammer.min.js"></script>
-			<div id="myElement"></div>
-		<script src="js/script.js"></script>
+
+		<div id="swipeElement"></div>
 
 		<!--
 		<p class="button-display">
@@ -40,20 +41,23 @@
 
 		<p class="button-display">
 			<button type="button" class="button-size1" onclick="a('1')">1</button>
-			<button type="button" class="button-size1"onclick="a('2')">2</button>
-			<button type="button" class="button-size1"onclick="a('3')">3</button>
+			<button type="button" class="button-size1" onclick="a('2')">2</button>
+			<button type="button" class="button-size1" onclick="a('3')">3</button>
 		</p>
 
 		<p class="button-display">
-			<button type="button" class="button-size1"onclick="a('0')">0</button>
-			<button type="button" class="button-size1"onclick="a('.')">.</button>
-			<button type="button" class="button-size1"onclick="e()">=</button>
+			<button type="button" class="button-size1" onclick="a('0')">0</button>
+			<button type="button" class="button-size1" onclick="a('.')">.</button>
+			<button type="button" class="button-size1" onclick="e()">=</button>
 		</p>
 
 		<p class="button-display">
 			<button type="button" class="button-size1"onclick="s('')">C</button>
 		</p>
 	</form>
+	
+	<script src="js/hammer.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
