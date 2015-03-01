@@ -12,26 +12,38 @@ function backspace() {
   return false;
 }
 
-// hammer js
-var myElement = document.getElementById('myElement');
+// hammer js swipe
+var swipeElement = document.getElementById('swipeElement');
 
-var mc = new Hammer(myElement);
+var mc = new Hammer(swipeElement);
 
 mc.get('swipe').set({direction: Hammer.DIRECTION_ALL, velocity:0.1, threshold:1});
 
 // listen to events...
 mc.on('swipeup', function(e) {
-    myElement.textContent = a('+');
+    swipeElement.textContent = a('+');
 });
 
 mc.on('swipedown', function(e) {
-    myElement.textContent = a('-');
+    swipeElement.textContent = a('-');
 });
 
 mc.on('swipeleft', function(e) {
-    myElement.textContent = a('*');
+    swipeElement.textContent = a('*');
 });
 
 mc.on('swiperight', function(e) {
-    myElement.textContent = a('/');
+    swipeElement.textContent = a('/');
 });
+
+// hammer js pinch
+var clearElement = document.getElementById('clearElement');
+
+var mc2 = new Hammer(clearElement);
+
+mc2.get('pinch').set({ enable: true });
+
+mc2.on('pinchout', function(e) {
+	clearElement.textContent = s('');
+});
+

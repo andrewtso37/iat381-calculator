@@ -19,6 +19,7 @@ input, button{
 	height: 60px;
 	font: 36px Arial, sans-serif;
 	text-align: right;
+	pointer-events: none;
 }
 
 .button-display{
@@ -46,7 +47,14 @@ input, button{
 	font: 28 Arial, sans-serif;
 }
 
-#myElement {
+#swipeElement {
+  background: lightgrey;
+  height: 150px;
+  text-align: center;
+  font: 30px/300px Helvetica, Arial, sans-serif;
+}
+
+#clearElement {
   background: lightgrey;
   height: 150px;
   text-align: center;
