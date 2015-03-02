@@ -1,5 +1,6 @@
 body{
 	max-width: 100%;
+	background: linear-gradient(#000000, #53046D);
 }
 
 input, button{
@@ -19,6 +20,9 @@ input, button{
 	height: 60px;
 	font: 36px Arial, sans-serif;
 	text-align: right;
+	background-color: transparent;
+	color: #FFFFFF;
+	border-color: transparent;
 	pointer-events: none;
 }
 
@@ -26,13 +30,29 @@ input, button{
 	display: flex;
 }
 
+.button-backspace{
+	width: 10%;
+	height: 150px;
+	margin-left: 10px;
+	font: 50px Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: 15px;
+	outline: 0;
+}
+
 .button-size1{
 	width: 33.3%;
 	height: 60px;
 	margin-left: 10px;
 	font: 32px Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: 15px;
+	outline: 0;
 }
-
 
 .button-size2{
 	width: 25%;
@@ -48,15 +68,169 @@ input, button{
 }
 
 #swipeElement {
-  background: lightgrey;
   height: 150px;
+  width: 150px;
   text-align: center;
-  font: 30px/300px Helvetica, Arial, sans-serif;
+  margin: auto;
+  font: 32px Helvetica, Arial, sans-serif;
+  border-radius: 100px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border-style: solid;
 }
 
-#clearElement {
-  background: lightgrey;
-  height: 150px;
-  text-align: center;
-  font: 30px/300px Helvetica, Arial, sans-serif;
+
+/* Custom SlideUp Animation for Input Display */
+.inputAnimation{
+	animation-name: inputAnimation;
+	-webkit-animation-name: inputAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+	
+	visibility: visible !important;			
+}
+
+@keyframes inputAnimation {
+	0% {opacity: 0.9;}
+	30% {-webkit-transform: translateY(-90%);opacity: 0.3;}
+	50% {-webkit-transform: translateY(-100%);opacity: 0.0;}
+	60% {-webkit-transform: translateY(0%);opacity: 0.0;}
+	65% {opacity: 0.2;}
+	70% {opacity: 0.3;}
+	75% {opacity: 0.4;}
+	80% {opacity: 0.5;}
+	85% {opacity: 0.7;}
+	90% {opacity: 0.9;}
+	100% {opacity: 1.0;}
+}
+
+@-webkit-keyframes inputAnimation {
+	0% {opacity: 0.7;}
+	30% {-webkit-transform: translateY(-100%);opacity: 0.3;}
+	50% {-webkit-transform: translateY(-120%);opacity: 0.0;}
+	60% {-webkit-transform: translateY(0%);opacity: 0.0;}
+	65% {opacity: 0.2;}
+	70% {opacity: 0.3;}
+	75% {opacity: 0.4;}
+	80% {opacity: 0.5;}
+	85% {opacity: 0.7;}
+	90% {opacity: 0.9;}
+	100% {opacity: 1.0;}
+}
+
+.buttonAnimation{
+	animation-name: buttonAnimation;
+	-webkit-animation-name: buttonAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+	
+	visibility: visible !important;		
+}
+
+@keyframes buttonAnimation {
+	0% 	{background:rgba(255,255,255,0.6);}
+	10% {background:rgba(255,255,255,0.7);}
+	20% {background:rgba(255,255,255,0.8);}
+	30% {background:rgba(255,255,255,0.7);}
+	40% {background:rgba(255,255,255,0.6);}
+	50% {background:rgba(255,255,255,0.5);}
+	60% {background:rgba(255,255,255,0.4);}
+	70%	{background:rgba(255,255,255,0.3);}
+	80% {background:rgba(255,255,255,0.2);}
+	90%	{background:rgba(255,255,255,0.1);}
+	100%{background:rgba(255,255,255,0.0);}
+}
+
+@-webkit-keyframes buttonAnimation {
+	0% 	{background:rgba(255,255,255,0.6);}
+	10% {background:rgba(255,255,255,0.7);}
+	20% {background:rgba(255,255,255,0.8);}
+	30% {background:rgba(255,255,255,0.7);}
+	40% {background:rgba(255,255,255,0.6);}
+	50% {background:rgba(255,255,255,0.5);}
+	60% {background:rgba(255,255,255,0.4);}
+	70%	{background:rgba(255,255,255,0.3);}
+	80% {background:rgba(255,255,255,0.2);}
+	90%	{background:rgba(255,255,255,0.1);}
+	100%{background:rgba(255,255,255,0.0);}
+}
+
+.backAnimation{
+	animation-name: backAnimation;
+	-webkit-animation-name: backAnimation;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+	
+	visibility: visible !important;	
+}
+
+@keyframes backAnimation {
+	0% 	{transform: scaleY(0.9);}
+	10% {transform: scaleY(0.7);}
+	20% {transform: scaleY(0.5);}
+	30% {transform: scaleY(0.3);}
+	40% {transform: scaleY(0.1);}
+	50% {transform: scaleY(0.0);}
+	60% {transform: scaleY(0.1);}
+	70%	{transform: scaleY(0.3);}
+	80% {transform: scaleY(0.5);}
+	90%	{transform: scaleY(0.7);}
+	100%{transform: scaleY(0.9);}
+}
+
+@-webkit-keyframes backAnimation {
+	0% 	{transform: scaleY(0.9);}
+	10% {transform: scaleY(0.7);}
+	20% {transform: scaleY(0.5);}
+	30% {transform: scaleY(0.3);}
+	40% {transform: scaleY(0.1);}
+	50% {transform: scaleY(0.0);}
+	60% {transform: scaleY(0.1);}
+	70%	{transform: scaleY(0.3);}
+	80% {transform: scaleY(0.5);}
+	90%	{transform: scaleY(0.7);}
+	100%{transform: scaleY(0.9);}
+}
+
+.clearAnimation{
+	animation-name: clearAnimation;
+	-webkit-animation-name: clearAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+	
+	visibility: visible !important;			
+}
+
+@keyframes clearAnimation {
+	10% {-webkit-transform: translateY(-10%);}
+	20% {-webkit-transform: translateY(-20%);}
+	30% {-webkit-transform: translateY(-80%);}
+	40% {-webkit-transform: translateY(-100%);}
+	50% {-webkit-transform: translateY(0%);opacity: 0.0;}
+	60% {opacity: 1.0;}
+}
+
+@-webkit-keyframes clearAnimation {
+	10% {-webkit-transform: translateY(-10%);}
+	20% {-webkit-transform: translateY(-20%);}
+	30% {-webkit-transform: translateY(-80%);}
+	40% {-webkit-transform: translateY(-100%);}
+	50% {-webkit-transform: translateY(0%);opacity: 0.0;}
+	60% {opacity: 1.0;}
 }

@@ -5,11 +5,13 @@ function e() { try { s(eval(document.getElementById('res').value)) } catch(e) { 
 
 // backspace button
 function backspace() {
-  var input, num;
-  input = document.getElementById('res');
-  num = input.value;
-  input.value = num.slice(0,num.length-1);
-  return false;
+	setTimeout(function() {
+	var input, num;
+	input = document.getElementById('res');
+	num = input.value;
+	input.value = num.slice(0,num.length-1);
+	return false;
+	}, 250);
 }
 
 // hammer js swipe
@@ -19,7 +21,7 @@ var mc = new Hammer(swipeElement);
 
 mc.get('swipe').set({direction: Hammer.DIRECTION_ALL, velocity:0.1, threshold:1});
 
-// listen to events...
+// listen for events...
 mc.on('swipeup', function(e) {
     swipeElement.textContent = a('+');
 });
@@ -36,14 +38,25 @@ mc.on('swiperight', function(e) {
     swipeElement.textContent = a('/');
 });
 
-// hammer js pinch
-var clearElement = document.getElementById('clearElement');
+mc.on('tap', function(ev) {
+  setTimeout(function() {
+    swipeElement.textContent = e();
+  }, 500);
+});
 
-var mc2 = new Hammer(clearElement);
+// hammer js pinch
+var clearElement = document.getElementById('res');
+
+var mc2 = new Hammer(res);
 
 mc2.get('pinch').set({ enable: true });
 
 mc2.on('pinchout', function(e) {
-	clearElement.textContent = s('');
+  $('#res').addClass('clearAnimation');
+  var display = document.getElementById('res');
+  document.getElementById('res').style.webkitAnimation = 'none';
+  setTimeout(function() {display.style.webkitAnimation = '';}, 0);
+  setTimeout(function() {
+  res.textContent = s('').value;
+  }, 500);
 });
-
