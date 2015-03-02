@@ -59,3 +59,8 @@ mc2.on('pinchout', function(e) {
   clearElement.textContent = s('').value;
   }, 250);
 });
+
+//color change function
+function colorChange(color){
+    document.body.className = color;
+};

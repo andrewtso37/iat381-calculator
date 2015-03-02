@@ -3,6 +3,26 @@ body{
 	background: linear-gradient(#000000, #53046D);
 }
 
+body.blue {
+	max-width: 100%;
+	background: linear-gradient(#000000, #0C106F);
+}
+
+body.purple {
+	max-width: 100%;
+	background: linear-gradient(#000000, #53046D);
+}
+
+body.red {
+	max-width: 100%;
+	background: linear-gradient(#000000, #600808);
+}
+
+body.green {
+	max-width: 100%;
+	background: linear-gradient(#000000, #357C09);
+}
+
 input, button{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -32,9 +52,17 @@ input, button{
 
 .button-backspace{
 	width: 10%;
-	height: 150px;
-	margin-left: 10px;
 	font: 50px Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: 5px;
+	outline: 0;
+}
+
+.button-size1{
+	width: 33.3%;
+	font: 32px Arial, sans-serif;
 	color: #FFFFFF;
 	background-color: transparent;
 	border-color: transparent;
@@ -42,16 +70,15 @@ input, button{
 	outline: 0;
 }
 
-.button-size1{
-	width: 33.3%;
-	height: 60px;
-	margin-left: 10px;
-	font: 32px Arial, sans-serif;
-	color: #FFFFFF;
-	background-color: transparent;
-	border-color: transparent;
-	border-radius: 15px;
+.color {
+	width: 20px;
+	height: 20px;
+	border-radius:20px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	border-width: 2px;
 	outline: 0;
+	display: inline-block;
 }
 
 .button-size2{
@@ -70,15 +97,31 @@ input, button{
 #swipeElement {
   height: 150px;
   width: 150px;
-  text-align: center;
-  margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   font: 32px Helvetica, Arial, sans-serif;
   border-radius: 100px;
-  color: #FFFFFF;
   background-color: transparent;
-  border-style: solid;
+  border-color: transparent;
 }
 
+#blue {
+	background-color: #0C106F;
+		float: left;
+}
+#purple{
+	background-color: #53046D;
+		float: right;
+}
+#green{
+	background-color: #357C09;
+		float: left;
+}
+#red{
+	background-color: #600808;
+		float: right;
+}
 
 /* Custom SlideUp Animation for Input Display */
 .inputAnimation{
@@ -122,6 +165,45 @@ input, button{
 	100% {opacity: 1.0;}
 }
 
+.colorAnimation{
+	animation-name: colorAnimation;
+	-webkit-animation-name: colorAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+	
+}
+@keyframes colorAnimation {
+	0%{background:rgba(255,255,255,0.0);}
+	10%{background:rgba(255,255,255,0.1);}
+	20% {background:rgba(255,255,255,0.3);}
+	30% {background:rgba(255,255,255,0.5);}
+	40% {background:rgba(255,255,255,0.6);}
+	50% {background:rgba(255,255,255,0.8);}
+	60% {background:rgba(255,255,255,0.6);}
+	70% {background:rgba(255,255,255,0.5);}
+	80% {background:rgba(255,255,255,0.3);}
+	90%{background:rgba(255,255,255,0.1);}
+	100%{background:rgba(255,255,255,0.0);}
+}
+
+@-webkit-keyframes colorAnimation {
+	0%{background:rgba(255,255,255,0.0);}
+	10%{background:rgba(255,255,255,0.1);}
+	20% {background:rgba(255,255,255,0.3);}
+	30% {background:rgba(255,255,255,0.5);}
+	40% {background:rgba(255,255,255,0.6);}
+	50% {background:rgba(255,255,255,0.8);}
+	60% {background:rgba(255,255,255,0.6);}
+	70% {background:rgba(255,255,255,0.5);}
+	80% {background:rgba(255,255,255,0.3);}
+	90%{background:rgba(255,255,255,0.1);}
+	100%{background:rgba(255,255,255,0.0);}
+}
+
 .buttonAnimation{
 	animation-name: buttonAnimation;
 	-webkit-animation-name: buttonAnimation;	
@@ -131,8 +213,6 @@ input, button{
 
 	animation-timing-function: ease;	
 	-webkit-animation-timing-function: ease;
-	
-	visibility: visible !important;		
 }
 
 @keyframes buttonAnimation {
@@ -172,8 +252,6 @@ input, button{
 
 	animation-timing-function: ease;	
 	-webkit-animation-timing-function: ease;
-	
-	visibility: visible !important;	
 }
 
 @keyframes backAnimation {
@@ -212,9 +290,7 @@ input, button{
 	-webkit-animation-duration: 1s;
 
 	animation-timing-function: ease;	
-	-webkit-animation-timing-function: ease;
-	
-	visibility: visible !important;			
+	-webkit-animation-timing-function: ease;	
 }
 
 @keyframes clearAnimation {
