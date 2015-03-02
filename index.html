@@ -8,8 +8,8 @@
 </head>
 
 <body>
-	<form class="grid">
-		<p class="button-display" id="clearElement">
+	<form class="grid" id="clearElement">
+		<p class="button-display">
 			<input type="text" name="res" id="res" class="input-display">
 			<button type="button" class="button-backspace" onclick="backspace()" id="backSpace"><</button>
 		</p>
@@ -47,9 +47,9 @@
 		//Equals Function Interaction
 		$('#swipeElement').click(function() {
 			$('#res').addClass('inputAnimation');
-			var display = document.getElementById('res');
+			var displayEqual = document.getElementById('res');
 			document.getElementById('res').style.webkitAnimation = 'none';
-			setTimeout(function() {display.style.webkitAnimation = '';}, 0);
+			setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
 		});
 		//BackSpace Interaction
 		$('#backSpace').click(function() {
@@ -57,10 +57,10 @@
 			var button = this;
 			this.style.webkitAnimation = 'none';
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
-			$('#res').addClass('backAnimation');
-			var display = document.getElementById('res');
-			document.getElementById('res').style.webkitAnimation = 'none';
-			setTimeout(function() {display.style.webkitAnimation = '';}, 0);
+			//$('#res').addClass('backAnimation');
+			//var displayDelete = document.getElementById('res');
+			//document.getElementById('res').style.webkitAnimation = 'none';
+			//setTimeout(function() {displayDelete.style.webkitAnimation = '';}, 0);
 		});
 		//Button Animation Interaction
 		$('#9').click(function(){  

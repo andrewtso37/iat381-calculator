@@ -45,18 +45,19 @@ mc.on('tap', function(ev) {
 });
 
 // hammer js pinch
-var clearElement = document.getElementById('res');
+var clearElement = document.getElementById('clearElement');
 
-var mc2 = new Hammer(res);
+var mc2 = new Hammer(clearElement);
 
 mc2.get('pinch').set({ enable: true });
 
+// listen for events...
 mc2.on('pinchout', function(e) {
-  $('#res').addClass('clearAnimation');
+	$('#res').addClass('inputAnimation');
   var display = document.getElementById('res');
   document.getElementById('res').style.webkitAnimation = 'none';
   setTimeout(function() {display.style.webkitAnimation = '';}, 0);
   setTimeout(function() {
-  res.textContent = s('').value;
+  clearElement.textContent = s('').value;
   }, 500);
 });
