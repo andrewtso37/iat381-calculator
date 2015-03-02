@@ -3,34 +3,63 @@ function s(v) { document.getElementById('res').value = v }
 function a(v) { document.getElementById('res').value += v }
 function e() { try { s(eval(document.getElementById('res').value)) } catch(e) { s('Error') } }
 
-// hammer js
-var myElement = document.getElementById('myElement');
+// backspace button
+function backspace() {
+	setTimeout(function() {
+	var input, num;
+	input = document.getElementById('res');
+	num = input.value;
+	input.value = num.slice(0,num.length-1);
+	return false;
+	}, 250);
+}
 
-// create a simple instance
-// by default, it only adds horizontal recognizers
-var mc = new Hammer(myElement);
+// hammer js swipe
+var swipeElement = document.getElementById('swipeElement');
 
-mc.get('swipe').set({direction: Hammer.DIRECTION_ALL});
+var mc = new Hammer(swipeElement);
+
+mc.get('swipe').set({direction: Hammer.DIRECTION_ALL, velocity:0.1, threshold:1});
 
 // listen to events...
-mc.on("swipeup panup", function(ev) {
-	myElement.textContent = a('+');
+// function button
+mc.on('swipeup', function(e) {
+    swipeElement.textContent = a('+');
 });
 
-mc.on("swipedown", function(ev) {
-    myElement.textContent = a('-');
+mc.on('swipedown', function(e) {
+    swipeElement.textContent = a('-');
 });
 
-mc.on("swipeleft", function(ev) {
-    myElement.textContent = a('*');
+mc.on('swipeleft', function(e) {
+    swipeElement.textContent = a('*');
 });
 
-mc.on("swiperight", function(ev) {
-    myElement.textContent = a('/');
+mc.on('swiperight', function(e) {
+    swipeElement.textContent = a('/');
 });
 
 mc.on("tap", function(ev) {
-    myElement.textContent = e();
+	setTimeout(function() {
+    swipeElement.textContent = e();
+	}, 500);
 });
 
-//operation button animation
+// hammer js pinch
+var clearElement = document.getElementById('res');
+
+var mc2 = new Hammer(res);
+
+mc2.get('pinch').set({ enable: true });
+
+mc2.on('pinchout', function(e) {
+	$('#res').addClass('clearAnimation');
+	var display = document.getElementById('res');
+	document.getElementById('res').style.webkitAnimation = 'none';
+	setTimeout(function() {display.style.webkitAnimation = '';}, 0);
+	setTimeout(function() {
+	res.textContent = s('');
+	}, 500);
+});
+
+

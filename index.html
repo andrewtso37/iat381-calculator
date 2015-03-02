@@ -5,55 +5,142 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<title>Calculator App</title>
 	<link rel="stylesheet" href="css/main.css">
-	<!--CSS3 Animation Cheat Sheet import-->
-	<link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 	<form class="grid">
-		<p>
+	<!--<div id="clearElement"></div> -->
+		<p class="button-display">
 			<input type="text" name="res" id="res" class="input-display">
+			<button type="button" class="button-backspace" onclick="backspace()" id='backSpace'><</button>
 		</p>
-			<div id="myElement"></div>
-			<!--<div id="plus">+</div>
-			<div id="multiply">*</div>
-			<div id="divide">/</div>
-			<div id="minus">-</div>
-			-->
+		
+		<div id="swipeElement"></div>
 			
 		<p class="button-display">
-			<button type="button" class="button-size1" onclick="a('7')">7</button>
-			<button type="button" class="button-size1" onclick="a('8')">8</button>
-			<button type="button" class="button-size1" onclick="a('9')">9</button>
+			<button type="button" class="button-size1" onclick="a('7')" id='7'>7</button>
+			<button type="button" class="button-size1" onclick="a('8')" id='8'>8</button>
+			<button type="button" class="button-size1" onclick="a('9')" id='9'>9</button>
 		</p>
 
 		<p class="button-display">
-			<button type="button" class="button-size1" onclick="a('4')">4</button>
-			<button type="button" class="button-size1" onclick="a('5')">5</button>
-			<button type="button" class="button-size1" onclick="a('6')">6</button>
+			<button type="button" class="button-size1" onclick="a('4')" id='4'>4</button>
+			<button type="button" class="button-size1" onclick="a('5')" id='5'>5</button>
+			<button type="button" class="button-size1" onclick="a('6')" id='6'>6</button>
 		</p>
 
 		<p class="button-display">
-			<button type="button" class="button-size1" onclick="a('1')">1</button>
-			<button type="button" class="button-size1"onclick="a('2')">2</button>
-			<button type="button" class="button-size1"onclick="a('3')">3</button>
+			<button type="button" class="button-size1" onclick="a('1')" id='1'>1</button>
+			<button type="button" class="button-size1" onclick="a('2')" id='2'>2</button>
+			<button type="button" class="button-size1" onclick="a('3')" id='3'>3</button>
 		</p>
 
 		<p class="button-display">
-			<button type="button" class="button-size1"onclick="a('.')">.</button>
-			<button type="button" class="button-size1"onclick="a('0')">0</button>
-			<button type="button" class="button-size1"onclick="s('')">C</button>
+			<button type="button" class="button-size1"onclick="a('.')" id='dot'>.</button>
+			<button type="button" class="button-size1"onclick="a('0')" id='0'>0</button>
+			<button type="button" class="button-size1"onclick="s('')" id='clear'>C</button>
 		</p>
 	</form>
 			<script src="js/hammer.min.js"></script>
 			<script src="js/script.js"></script>
 			<script src="js/jquery.js"></script>
 	<script>
-	$('#myElement').click(function() {
-		$('#plus').addClass("slideUp");
-		$('#minus').addClass("slideDown");
-		$('#multiply').addClass("slideLeft");
-		$('#divide').addClass("slideRight");
-	});
+		//Equals Function Interaction
+		$('#swipeElement').click(function() {
+			$('#res').addClass('inputAnimation');
+			var display = document.getElementById('res');
+			document.getElementById('res').style.webkitAnimation = 'none';
+			setTimeout(function() {display.style.webkitAnimation = '';}, 0);
+		});
+		//BackSpace Interaction
+		$('#backSpace').click(function() {
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+			$('#res').addClass('backAnimation');
+			var display = document.getElementById('res');
+			document.getElementById('res').style.webkitAnimation = 'none';
+			setTimeout(function() {display.style.webkitAnimation = '';}, 0);
+		});
+		//Button Animation Interaction
+		$('#9').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#8').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#7').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#6').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#5').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#4').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#3').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#2').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#1').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#0').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#dot').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#clear').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#delete').click(function(){  
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});			
 	</script>
 </body>
 </html>
