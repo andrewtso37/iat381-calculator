@@ -21,19 +21,19 @@ mc.get('swipe').set({direction: Hammer.DIRECTION_ALL, velocity:0.1, threshold:1}
 
 // listen to events...
 mc.on('swipeup', function(e) {
-    swipeElement.textContent = a('+');
+    swipeElement.textContent = a('+').value;
 });
 
 mc.on('swipedown', function(e) {
-    swipeElement.textContent = a('-');
+    swipeElement.textContent = a('-').value;
 });
 
 mc.on('swipeleft', function(e) {
-    swipeElement.textContent = a('*');
+    swipeElement.textContent = a('*').value;
 });
 
 mc.on('swiperight', function(e) {
-    swipeElement.textContent = a('/');
+    swipeElement.textContent = a('/').value;
 });
 
 // hammer js pinch
@@ -44,6 +44,6 @@ var mc2 = new Hammer(clearElement);
 mc2.get('pinch').set({ enable: true });
 
 mc2.on('pinchout', function(e) {
-	clearElement.textContent = s('');
+	clearElement.textContent = s('').value;
 });
 

@@ -53,10 +53,3 @@ input, button{
   text-align: center;
   font: 30px/300px Helvetica, Arial, sans-serif;
 }
-
-#clearElement {
-  background: lightgrey;
-  height: 150px;
-  text-align: center;
-  font: 30px/300px Helvetica, Arial, sans-serif;
-}
