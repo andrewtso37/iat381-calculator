@@ -46,7 +46,7 @@
 	<script>
 		//Equals Function Interaction
 		$('#swipeElement').click(function() {
-			$('#res').addClass('inputAnimation');
+			$('#res').addClass('backAnimation');
 			var displayEqual = document.getElementById('res');
 			document.getElementById('res').style.webkitAnimation = 'none';
 			setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
@@ -134,13 +134,12 @@
 			var button = this;
 			this.style.webkitAnimation = 'none';
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+			$('#res').addClass('backAnimation');
+			var displayEqual = document.getElementById('res');
+			document.getElementById('res').style.webkitAnimation = 'none';
+			setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
 		});
-		$('#delete').click(function(){  
-			$(this).addClass('buttonAnimation');
-			var button = this;
-			this.style.webkitAnimation = 'none';
-			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
-		});			
+		
 	</script>
 </body>
 </html>

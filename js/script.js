@@ -5,13 +5,11 @@ function e() { try { s(eval(document.getElementById('res').value)) } catch(e) { 
 
 // backspace button
 function backspace() {
-	setTimeout(function() {
 	var input, num;
 	input = document.getElementById('res');
 	num = input.value;
 	input.value = num.slice(0,num.length-1);
 	return false;
-	}, 250);
 }
 
 // hammer js swipe
@@ -41,7 +39,7 @@ mc.on('swiperight', function(e) {
 mc.on('tap', function(ev) {
   setTimeout(function() {
     swipeElement.textContent = e();
-  }, 500);
+  }, 250);
 });
 
 // hammer js pinch
@@ -59,5 +57,5 @@ mc2.on('pinchout', function(e) {
   setTimeout(function() {display.style.webkitAnimation = '';}, 0);
   setTimeout(function() {
   clearElement.textContent = s('').value;
-  }, 500);
+  }, 250);
 });
