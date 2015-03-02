@@ -11,10 +11,17 @@
 	<form class="grid" id="clearElement">
 		<p class="button-display">
 			<input type="text" name="res" id="res" class="input-display">
-			<button type="button" class="button-backspace" onclick="backspace()" id="backSpace"><</button>
+			<button type="button" class="button-backspace" onclick="backspace()" id="backSpace">
+			<img src="images/backspace.png" id="backImage" ></img>
+			</button>
 		</p>
-		
-		<div id="swipeElement"></div>
+		<table align="center">
+			<td width= 50><div class='color' onclick="colorChange('blue')" id='blue'></div></td>
+			<td width= 50><div class='color' onclick="colorChange('green')" id='green'></div></td>
+			<td><div><img src="images/operations.png" id="swipeElement"></img></div></td>
+			<td width= 50><div class='color' onclick="colorChange('red')" id='red'></div></td>
+			<td width= 50><div class='color' onclick="colorChange('purple')" id='purple'></div></td>
+		</table>	
 			
 		<p class="button-display">
 			<button type="button" class="button-size1" onclick="a('7')" id='7'>7</button>
@@ -44,8 +51,37 @@
 			<script src="js/script.js"></script>
 			<script src="js/jquery.js"></script>
 	<script>
+		//Color Button Animation
+		$('#blue').click(function() {
+			$(this).addClass('colorAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#green').click(function() {
+			$(this).addClass('colorAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#red').click(function() {
+			$(this).addClass('colorAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#purple').click(function() {
+			$(this).addClass('colorAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
 		//Equals Function Interaction
 		$('#swipeElement').click(function() {
+			$(this).addClass('buttonAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
 			$('#res').addClass('backAnimation');
 			var displayEqual = document.getElementById('res');
 			document.getElementById('res').style.webkitAnimation = 'none';
@@ -57,10 +93,6 @@
 			var button = this;
 			this.style.webkitAnimation = 'none';
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
-			//$('#res').addClass('backAnimation');
-			//var displayDelete = document.getElementById('res');
-			//document.getElementById('res').style.webkitAnimation = 'none';
-			//setTimeout(function() {displayDelete.style.webkitAnimation = '';}, 0);
 		});
 		//Button Animation Interaction
 		$('#9').click(function(){  
@@ -134,12 +166,7 @@
 			var button = this;
 			this.style.webkitAnimation = 'none';
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
-			$('#res').addClass('backAnimation');
-			var displayEqual = document.getElementById('res');
-			document.getElementById('res').style.webkitAnimation = 'none';
-			setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
 		});
-		
 	</script>
 </body>
 </html>
