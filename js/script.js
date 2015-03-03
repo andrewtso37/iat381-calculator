@@ -41,12 +41,6 @@ mc.on('swiperight', function(e) {
     swipeElement.textContent = a('/');
 });
 
-mc.on('tap', function(ev) {
-  setTimeout(function() {
-    swipeElement.textContent = e();
-  }, 250);
-});
-
 // hammer js pinch
 var clearElement = document.getElementById('clearElement');
 

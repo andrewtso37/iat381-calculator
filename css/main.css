@@ -4,10 +4,6 @@ body {
 	background: linear-gradient(#000000, #53046D);
 }
 
-form {
-	margin-top: -32px;
-}
-
 input, button{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -66,6 +62,10 @@ input, button{
 	width: 10%;
 	height: 60px;
 	font: 28 Arial, sans-serif;
+}
+
+.position{
+	margin-bottom: -60px
 }
 
 #swipeElement {
