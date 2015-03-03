@@ -3,7 +3,7 @@ function s(v) { document.getElementById('res').value = v }
 function a(v) { document.getElementById('res').value += v }
 function e() { try { s(eval(document.getElementById('res').value))} catch(e) { s('Error') } }
 
-// backspace button
+// backspace
 function backspace() {
 	var input, num;
 	input = document.getElementById('res');
@@ -24,6 +24,7 @@ function clearAll() {
   }, 250);
 }
 
+// calculate animation timing
 function calc() {
   setTimeout(function() {
 	e();
@@ -55,18 +56,17 @@ mc.on('swiperight', function(e) {
 });
 
 // hammer js pinch
-var inputDisplay = document.getElementById('res');
+var clearElement = document.getElementById('clearElement');
 
-var mc2 = new Hammer(inputDisplay);
+var mc2 = new Hammer(clearElement);
 
 mc2.get('pinch').set({ enable: true });
-mc2.get('swipe').set({direction: Hammer.DIRECTION_ALL, velocity:0.1, threshold:1});
 
 // listen for events...
-mc2.on('swipe pinch', function(e) {
-	$('#res').addClass('backAnimation');
+mc2.on('pinch', function(e) {
+	$('#res').addClass('flipAnimation');
 	var displayEqual = document.getElementById('res');
 	document.getElementById('res').style.webkitAnimation = 'none';
-	setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
+	setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 10);
 	clearAll();
 });

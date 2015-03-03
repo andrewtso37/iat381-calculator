@@ -7,13 +7,10 @@
 
 **Animations**
 - Ripple for pressed buttons
-- Loop for output display
+- Flip for output display
 
 **Color picker for theme customization**
 
 **Libraries Used**
 - hammerjs
 - CSS animations
-
-**Icons**
-- Color Picker - Created by Kenneth Appiah from the Noun Project
