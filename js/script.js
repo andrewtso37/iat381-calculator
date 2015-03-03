@@ -61,10 +61,9 @@ var clearElement = document.getElementById('clearElement');
 var mc2 = new Hammer(clearElement);
 
 mc2.get('pinch').set({ enable: true });
-mc2.get('swipe').set({direction: Hammer.VERTICAL, velocity:0.1, threshold:1});
 
 // listen for events...
-mc2.on('swipe, pinch', function(e) {
+mc2.on('pinch', function(e) {
 	$('#res').addClass('flipAnimation');
 	var displayEqual = document.getElementById('res');
 	document.getElementById('res').style.webkitAnimation = 'none';
