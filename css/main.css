@@ -107,10 +107,9 @@ input, button{
 	width: 50px;
 	height: 50px;
 	border-radius: 50px;
-	border: 4px;
-	border-style: solid;
+	border-style: none;
 	outline: 0;
-	display: inline-block;
+	
 }
 
 .colorPickerWindow > div {
@@ -120,10 +119,10 @@ input, button{
 	margin: 20% auto;
 	padding: 5px 5px;
 	border-radius: 10px;
-	background: transparent;
-	/*background: -moz-linear-gradient(#d3d3d3, #999);
-	background: -webkit-linear-gradient(#d3d3d3, #999);
-	background: -o-linear-gradient(#d3d3d3, #999);*/
+	background: #a8a8a8 ;
+	background: -moz-linear-gradient(#a8a8a8 , #999);
+	background: -webkit-linear-gradient(#a8a8a8 , #999);
+	background: -o-linear-gradient(#a8a8a8 , #999);
 }
 
 .close {
