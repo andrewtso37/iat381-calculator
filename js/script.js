@@ -12,6 +12,11 @@ function backspace() {
 	return false;
 }
 
+// change color
+function colorChange(color) {
+    document.body.className = color;
+};
+
 // hammer js swipe
 var swipeElement = document.getElementById('swipeElement');
 
@@ -51,16 +56,5 @@ mc2.get('pinch').set({ enable: true });
 
 // listen for events...
 mc2.on('pinchout', function(e) {
-	//$('#res').addClass('inputAnimation');
-  //var display = document.getElementById('res');
-  //document.getElementById('res').style.webkitAnimation = 'none';
-  //setTimeout(function() {display.style.webkitAnimation = '';}, 0);
-  //setTimeout(function() {
   clearElement.textContent = s('').value;
-  //}, 250);
 });
-
-//color change function
-function colorChange(color){
-    document.body.className = color;
-};
