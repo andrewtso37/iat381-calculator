@@ -82,16 +82,6 @@ input, button{
 
 
 /* color picker */
-.color {
-	width: 80px;
-	height: 80px;
-	border-radius: 83px;
-	border: 4px;
-	border-style: solid;
-	outline: 0;
-	display: inline-block;
-}
-
 .colorPickerWindow{
 	position: fixed;
 	font-family: Arial, Helvetica, sans-serif;
@@ -117,7 +107,8 @@ input, button{
 	width: 50px;
 	height: 50px;
 	border-radius: 50px;
-	border-style: none;
+	border: 4px;
+	border-style: solid;
 	outline: 0;
 	display: inline-block;
 }
