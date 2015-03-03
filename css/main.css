@@ -112,7 +112,7 @@ input, button{
 }
 
 .colorPickerWindow > div {
-	width: 180px;
+	width: 175px;
 	height: 100px;
 	position: relative;
 	margin: 20% auto;
