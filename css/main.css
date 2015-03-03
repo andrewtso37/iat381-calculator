@@ -24,7 +24,6 @@ input, button{
 	background-color: transparent;
 	color: #FFFFFF;
 	border-color: transparent;
-	pointer-events: none;
 }
 
 .button-display{
@@ -68,7 +67,7 @@ input, button{
 	margin-bottom: -60px
 }
 
-#swipeElement {
+#swipeElement{
   height: 150px;
   width: 150px;
   display: block;
@@ -81,16 +80,7 @@ input, button{
 }
 
 
-/* color picker */
-.color {
-	width: 83px;
-	height: 83px;
-	border-radius: 83px;
-	border-style: none;
-	outline: 0;
-	display: inline-block;
-}
-
+/* Color picker */
 .colorPickerWindow{
 	position: fixed;
 	font-family: Arial, Helvetica, sans-serif;
@@ -116,23 +106,22 @@ input, button{
 	width: 50px;
 	height: 50px;
 	border-radius: 50px;
-	border-style: none;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #a8a8a8;
 	outline: 0;
-	display: inline-block;
 }
 
 .colorPickerWindow > div {
-	width: 150px;
-	height: 100px;
+	width: 175px;
+	height: 115px;
 	position: relative;
 	margin: 20% auto;
 	padding: 5px 5px;
 	border-radius: 10px;
-	background: transparent;
-	/*background: -moz-linear-gradient(#d3d3d3, #999);
-	background: -webkit-linear-gradient(#d3d3d3, #999);
-	background: -o-linear-gradient(#d3d3d3, #999);*/
+	background: #a8a8a8;
 }
+
 
 .close {
 	background: #606061;
@@ -153,31 +142,38 @@ input, button{
 	box-shadow: 1px 1px 3px #000;
 }
 
-.blue {
+#pickerIcon{
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 2;
+}
+
+.blue{
 	background: linear-gradient(#000000, #0C106F);
 }
 
-.purple {
+.purple{
 	background: linear-gradient(#000000, #53046D);
 }
 
-.red {
+.red{
 	background: linear-gradient(#000000, #600808);
 }
 
-.green {
+.green{
 	background: linear-gradient(#000000, #357C09);
 }
 
-.orange {
+.orange{
 	background: linear-gradient(#000000, #FF9900);
 }
 
-.magenta {
+.magenta{
 	background: linear-gradient(#000000, #FF3399);
 }
 
-#blue {
+#blue{
 	background-color: #0C106F;
 	float: left;
 }
@@ -203,46 +199,7 @@ input, button{
 }
 
 
-/* Custom SlideUp Animation for Input Display */
-.inputAnimation{
-	animation-name: inputAnimation;
-	-webkit-animation-name: inputAnimation;	
-
-	animation-duration: 1s;	
-	-webkit-animation-duration: 1s;
-
-	animation-timing-function: ease;	
-	-webkit-animation-timing-function: ease;	
-}
-
-@keyframes inputAnimation {
-	0% {opacity: 0.9;}
-	30% {-webkit-transform: translateY(-90%);opacity: 0.3;}
-	50% {-webkit-transform: translateY(-100%);opacity: 0.0;}
-	60% {-webkit-transform: translateY(0%);opacity: 0.0;}
-	65% {opacity: 0.2;}
-	70% {opacity: 0.3;}
-	75% {opacity: 0.4;}
-	80% {opacity: 0.5;}
-	85% {opacity: 0.7;}
-	90% {opacity: 0.9;}
-	100% {opacity: 1.0;}
-}
-
-@-webkit-keyframes inputAnimation {
-	0% {opacity: 0.7;}
-	30% {-webkit-transform: translateY(-100%);opacity: 0.3;}
-	50% {-webkit-transform: translateY(-120%);opacity: 0.0;}
-	60% {-webkit-transform: translateY(0%);opacity: 0.0;}
-	65% {opacity: 0.2;}
-	70% {opacity: 0.3;}
-	75% {opacity: 0.4;}
-	80% {opacity: 0.5;}
-	85% {opacity: 0.7;}
-	90% {opacity: 0.9;}
-	100% {opacity: 1.0;}
-}
-
+/* Animations */
 .colorAnimation{
 	animation-name: colorAnimation;
 	-webkit-animation-name: colorAnimation;	
@@ -321,9 +278,9 @@ input, button{
 	100%{background:rgba(255,255,255,0.0);}
 }
 
-.backAnimation{
-	animation-name: backAnimation;
-	-webkit-animation-name: backAnimation;	
+.flipAnimation{
+	animation-name: flipAnimation;
+	-webkit-animation-name: flipAnimation;	
 
 	animation-duration: 0.5s;	
 	-webkit-animation-duration: 0.5s;
@@ -332,7 +289,7 @@ input, button{
 	-webkit-animation-timing-function: ease;
 }
 
-@keyframes backAnimation {
+@keyframes flipAnimation {
 	0% 	{transform: scaleY(0.9);}
 	10% {transform: scaleY(0.7);}
 	20% {transform: scaleY(0.5);}
@@ -346,7 +303,7 @@ input, button{
 	100%{transform: scaleY(0.9);}
 }
 
-@-webkit-keyframes backAnimation {
+@-webkit-keyframes flipAnimation {
 	0% 	{transform: scaleY(0.9);}
 	10% {transform: scaleY(0.7);}
 	20% {transform: scaleY(0.5);}
@@ -358,33 +315,4 @@ input, button{
 	80% {transform: scaleY(0.5);}
 	90%	{transform: scaleY(0.7);}
 	100%{transform: scaleY(0.9);}
-}
-
-.clearAnimation{
-	animation-name: clearAnimation;
-	-webkit-animation-name: clearAnimation;	
-
-	animation-duration: 1s;	
-	-webkit-animation-duration: 1s;
-
-	animation-timing-function: ease;	
-	-webkit-animation-timing-function: ease;	
-}
-
-@keyframes clearAnimation {
-	10% {-webkit-transform: translateY(-10%);}
-	20% {-webkit-transform: translateY(-20%);}
-	30% {-webkit-transform: translateY(-80%);}
-	40% {-webkit-transform: translateY(-100%);}
-	50% {-webkit-transform: translateY(0%);opacity: 0.0;}
-	60% {opacity: 1.0;}
-}
-
-@-webkit-keyframes clearAnimation {
-	10% {-webkit-transform: translateY(-10%);}
-	20% {-webkit-transform: translateY(-20%);}
-	30% {-webkit-transform: translateY(-80%);}
-	40% {-webkit-transform: translateY(-100%);}
-	50% {-webkit-transform: translateY(0%);opacity: 0.0;}
-	60% {opacity: 1.0;}
 }

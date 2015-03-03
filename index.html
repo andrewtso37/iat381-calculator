@@ -10,13 +10,13 @@
 <body>
 	<form class="grid" id="clearElement">
 		<p class="button-display">
-			<input type="text" name="res" id="res" class="input-display">
+			<input type="text" name="res" id="res" class="input-display" readonly>
 			<button type="button" class="button-backspace" onclick="backspace()" id="backSpace">
-			<img src="images/backspace.png" id="backImage" ></img>
+			<img src="images/backspace.png" id="backImage"></img>
 			</button>
 		</p>
 		<table align="center">
-			<td><div><img src="images/operations.png" id="swipeElement" onClick="e()"></img></div></td>
+			<td><div><img src="images/operations.png" id="swipeElement" onClick="calc()"></img></div></td>
 		</table>	
 			
 		<p class="button-display">
@@ -40,10 +40,11 @@
 		<p class="button-display">
 			<button type="button" class="button-size1" onclick="a('.')" id='dot'>.</button>
 			<button type="button" class="button-size1" onclick="a('0')" id='0'>0</button>
-			<button type="button" class="button-size1" onclick="s('')" id='clear'>C</button>
+			<button type="button" class="button-size1" onclick="clearAll()" id='clear'>C</button>
 		</p>	
-		<div align="right"><a href="#picker"><img src="images/picker.png" height="30" width="30"></img></a></div>
-	<div id="picker" class="colorPickerWindow">
+		
+		<div align="right"><a href="#picker"><img src="images/picker.png" height="30" width="30" id='pickerIcon'></img></a></div>
+		<div id="picker" class="colorPickerWindow">
 		<div>
 			<a href="#close" class="close">X</a>
 			<div class='color' onclick="colorChange('blue')" id='blue'></div>
@@ -62,7 +63,7 @@
 	<script src="js/jquery.js"></script>
 	
 	<script>
-		//Color Button Animation
+		// Color Button Animation
 		$('#blue').click(function() {
 			$(this).addClass('colorAnimation');
 			var button = this;
@@ -100,31 +101,31 @@
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
 		});
 		
-		//Equals Function Interaction
+		// Equals Function Interaction
 		$('#swipeElement').click(function() {
 			$(this).addClass('buttonAnimation');
 			var button = this;
 			this.style.webkitAnimation = 'none';
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
-			$('#res').addClass('backAnimation');
+			$('#res').addClass('flipAnimation');
 			var displayEqual = document.getElementById('res');
 			document.getElementById('res').style.webkitAnimation = 'none';
 			setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
 		});
 
-		// Cleat Button Animation
+		// Clear Button Animation
 		$('#clear').click(function(){  
 			$(this).addClass('buttonAnimation');
 			var button = this;
 			this.style.webkitAnimation = 'none';
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
-			$('#res').addClass('backAnimation');
+			$('#res').addClass('flipAnimation');
 			var displayEqual = document.getElementById('res');
 			document.getElementById('res').style.webkitAnimation = 'none';
 			setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
 		});
 		
-		//BackSpace Interaction
+		// BackSpace Interaction
 		$('#backSpace').click(function() {
 			$(this).addClass('buttonAnimation');
 			var button = this;
@@ -132,7 +133,7 @@
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
 		});
 		
-		//Button Animation Interaction
+		// Button Interaction
 		$('#9').click(function(){  
 			$(this).addClass('buttonAnimation');
 			var button = this;

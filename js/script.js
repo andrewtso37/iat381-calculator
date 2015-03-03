@@ -3,7 +3,7 @@ function s(v) { document.getElementById('res').value = v }
 function a(v) { document.getElementById('res').value += v }
 function e() { try { s(eval(document.getElementById('res').value))} catch(e) { s('Error') } }
 
-// backspace button
+// backspace
 function backspace() {
 	var input, num;
 	input = document.getElementById('res');
@@ -21,6 +21,13 @@ function colorChange(color) {
 function clearAll() {
   setTimeout(function() {
     document.getElementById('res').value = '';
+  }, 250);
+}
+
+// calculate animation timing
+function calc() {
+  setTimeout(function() {
+	e();
   }, 250);
 }
 
@@ -56,14 +63,10 @@ var mc2 = new Hammer(clearElement);
 mc2.get('pinch').set({ enable: true });
 
 // listen for events...
-mc2.on('pinchout', function(e) {
-  $(this).addClass('buttonAnimation');
-  var button = this;
-  this.style.webkitAnimation = 'none';
-  setTimeout(function() {button.style.webkitAnimation = '';}, 0);
-  $('#res').addClass('backAnimation');
-  var displayEqual = document.getElementById('res');
-  document.getElementById('res').style.webkitAnimation = 'none';
-  setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
-  clearElement.textContent = s('').value;
+mc2.on('pinch', function(e) {
+	$('#res').addClass('flipAnimation');
+	var displayEqual = document.getElementById('res');
+	document.getElementById('res').style.webkitAnimation = 'none';
+	setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 10);
+	clearAll();
 });
