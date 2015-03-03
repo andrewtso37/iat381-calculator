@@ -112,17 +112,26 @@ input, button{
 	pointer-events: auto;
 }
 
+.color {
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	border-style: none;
+	outline: 0;
+	display: inline-block;
+}
+
 .colorPickerWindow > div {
-	width: 250px;
-	height: 175px;
+	width: 150px;
+	height: 100px;
 	position: relative;
-	margin: 10% auto;
-	padding: 5px 20px 13px 20px;
+	margin: 20% auto;
+	padding: 5px 5px;
 	border-radius: 10px;
-	background: #d3d3d3;
-	background: -moz-linear-gradient(#d3d3d3, #999);
+	background: transparent;
+	/*background: -moz-linear-gradient(#d3d3d3, #999);
 	background: -webkit-linear-gradient(#d3d3d3, #999);
-	background: -o-linear-gradient(#d3d3d3, #999);
+	background: -o-linear-gradient(#d3d3d3, #999);*/
 }
 
 .close {
@@ -203,9 +212,7 @@ input, button{
 	-webkit-animation-duration: 1s;
 
 	animation-timing-function: ease;	
-	-webkit-animation-timing-function: ease;
-	
-	visibility: visible !important;			
+	-webkit-animation-timing-function: ease;	
 }
 
 @keyframes inputAnimation {

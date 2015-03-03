@@ -1,7 +1,7 @@
 // calculation functions
 function s(v) { document.getElementById('res').value = v }
 function a(v) { document.getElementById('res').value += v }
-function e() { try { s(eval(document.getElementById('res').value)) } catch(e) { s('Error') } }
+function e() { try { s(eval(document.getElementById('res').value))} catch(e) { s('Error') } }
 
 // backspace button
 function backspace() {
@@ -16,6 +16,13 @@ function backspace() {
 function colorChange(color) {
     document.body.className = color;
 };
+
+// clear
+function clearAll() {
+  setTimeout(function() {
+    document.getElementById('res').value = '';
+  }, 250);
+}
 
 // hammer js swipe
 var swipeElement = document.getElementById('swipeElement');
@@ -50,5 +57,13 @@ mc2.get('pinch').set({ enable: true });
 
 // listen for events...
 mc2.on('pinchout', function(e) {
+  $(this).addClass('buttonAnimation');
+  var button = this;
+  this.style.webkitAnimation = 'none';
+  setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+  $('#res').addClass('backAnimation');
+  var displayEqual = document.getElementById('res');
+  document.getElementById('res').style.webkitAnimation = 'none';
+  setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
   clearElement.textContent = s('').value;
 });
