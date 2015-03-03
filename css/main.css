@@ -83,10 +83,11 @@ input, button{
 
 /* color picker */
 .color {
-	width: 83px;
-	height: 83px;
+	width: 80px;
+	height: 80px;
 	border-radius: 83px;
-	border-style: none;
+	border: 4px;
+	border-style: solid;
 	outline: 0;
 	display: inline-block;
 }
@@ -122,7 +123,7 @@ input, button{
 }
 
 .colorPickerWindow > div {
-	width: 150px;
+	width: 280px;
 	height: 100px;
 	position: relative;
 	margin: 20% auto;
