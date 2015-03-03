@@ -1,31 +1,94 @@
-body{
+body {
 	max-width: 100%;
 	height: 100vh;
 	background: linear-gradient(#000000, #53046D);
 }
 
-.blue {
-	background: linear-gradient(#000000, #0C106F);
+form {
+	margin-top: -32px;
 }
 
-.purple {
-	background: linear-gradient(#000000, #53046D);
+input, button{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.red {
-	background: linear-gradient(#000000, #600808);
+.grid{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.green {
-	background: linear-gradient(#000000, #357C09);
+.input-display{
+	width: 90%;
+	height: 60px;
+	font: 36px Arial, sans-serif;
+	text-align: right;
+	background-color: transparent;
+	color: #FFFFFF;
+	border-color: transparent;
+	pointer-events: none;
 }
 
-.orange {
-	background: linear-gradient(#000000, #FF9900);
+.button-display{
+	display: flex;
 }
 
-.magenta {
-	background: linear-gradient(#000000, #FF3399);
+.button-backspace{
+	width: 10%;
+	font: 50px Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: 5px;
+	outline: 0;
+}
+
+.button-size1{
+	width: 33.3%;
+	font: 32px Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: 15px;
+	outline: 0;
+}
+
+.button-size2{
+	width: 25%;
+	height: 60px;
+	margin-left: 8px;
+	font: 28px Arial, sans-serif;
+}
+
+.button-backspace{
+	width: 10%;
+	height: 60px;
+	font: 28 Arial, sans-serif;
+}
+
+#swipeElement {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font: 32px Helvetica, Arial, sans-serif;
+  border-radius: 100px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
+/* color picker */
+.color {
+	width: 83px;
+	height: 83px;
+	border-radius: 83px;
+	border-style: none;
+	outline: 0;
+	display: inline-block;
 }
 
 .colorPickerWindow{
@@ -81,85 +144,28 @@ body{
 	box-shadow: 1px 1px 3px #000;
 }
 
-input, button{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.blue {
+	background: linear-gradient(#000000, #0C106F);
 }
 
-.grid{
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
+.purple {
+	background: linear-gradient(#000000, #53046D);
 }
 
-.input-display{
-	width: 90%;
-	height: 60px;
-	font: 36px Arial, sans-serif;
-	text-align: right;
-	background-color: transparent;
-	color: #FFFFFF;
-	border-color: transparent;
-	pointer-events: none;
+.red {
+	background: linear-gradient(#000000, #600808);
 }
 
-.button-display{
-	display: flex;
+.green {
+	background: linear-gradient(#000000, #357C09);
 }
 
-.button-backspace{
-	width: 10%;
-	font: 50px Arial, sans-serif;
-	color: #FFFFFF;
-	background-color: transparent;
-	border-color: transparent;
-	border-radius: 5px;
-	outline: 0;
+.orange {
+	background: linear-gradient(#000000, #FF9900);
 }
 
-.button-size1{
-	width: 33.3%;
-	font: 32px Arial, sans-serif;
-	color: #FFFFFF;
-	background-color: transparent;
-	border-color: transparent;
-	border-radius: 15px;
-	outline: 0;
-}
-
-.color {
-	width: 83px;
-	height: 83px;
-	border-radius: 83px;
-	border-style: none;
-	outline: 0;
-	display: inline-block;
-}
-
-.button-size2{
-	width: 25%;
-	height: 60px;
-	margin-left: 8px;
-	font: 28px Arial, sans-serif;
-}
-
-.button-backspace{
-	width: 10%;
-	height: 60px;
-	font: 28 Arial, sans-serif;
-}
-
-#swipeElement {
-  height: 150px;
-  width: 150px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  font: 32px Helvetica, Arial, sans-serif;
-  border-radius: 100px;
-  background-color: transparent;
-  border-color: transparent;
+.magenta {
+	background: linear-gradient(#000000, #FF3399);
 }
 
 #blue {

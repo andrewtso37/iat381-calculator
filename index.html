@@ -57,9 +57,11 @@
 			<button type="button" class="button-size1"onclick="s('')" id='clear'>C</button>
 		</p>
 	</form>
-			<script src="js/hammer.min.js"></script>
-			<script src="js/script.js"></script>
-			<script src="js/jquery.js"></script>
+	
+	<script src="js/hammer.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/jquery.js"></script>
+	
 	<script>
 		//Color Button Animation
 		$('#blue').click(function() {
@@ -110,6 +112,7 @@
 			document.getElementById('res').style.webkitAnimation = 'none';
 			setTimeout(function() {displayEqual.style.webkitAnimation = '';}, 0);
 		});
+		
 		//BackSpace Interaction
 		$('#backSpace').click(function() {
 			$(this).addClass('buttonAnimation');
@@ -117,6 +120,7 @@
 			this.style.webkitAnimation = 'none';
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
 		});
+		
 		//Button Animation Interaction
 		$('#9').click(function(){  
 			$(this).addClass('buttonAnimation');
