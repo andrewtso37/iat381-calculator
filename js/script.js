@@ -24,6 +24,12 @@ function clearAll() {
   }, 250);
 }
 
+function evaluate() {
+  setTimeout(function() {
+    e();
+  }, 250);
+}
+
 // hammer js swipe
 var swipeElement = document.getElementById('swipeElement');
 
@@ -57,10 +63,7 @@ mc2.get('pinch').set({ enable: true });
 
 // listen for events...
 mc2.on('pinchout', function(e) {
-  $(this).addClass('buttonAnimation');
-  var button = this;
-  this.style.webkitAnimation = 'none';
-  setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+
   $('#res').addClass('backAnimation');
   var displayEqual = document.getElementById('res');
   document.getElementById('res').style.webkitAnimation = 'none';
