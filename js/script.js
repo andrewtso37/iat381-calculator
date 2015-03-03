@@ -51,13 +51,13 @@ mc2.get('pinch').set({ enable: true });
 
 // listen for events...
 mc2.on('pinchout', function(e) {
-	$('#res').addClass('inputAnimation');
-  var display = document.getElementById('res');
-  document.getElementById('res').style.webkitAnimation = 'none';
-  setTimeout(function() {display.style.webkitAnimation = '';}, 0);
-  setTimeout(function() {
+	//$('#res').addClass('inputAnimation');
+  //var display = document.getElementById('res');
+  //document.getElementById('res').style.webkitAnimation = 'none';
+  //setTimeout(function() {display.style.webkitAnimation = '';}, 0);
+  //setTimeout(function() {
   clearElement.textContent = s('').value;
-  }, 250);
+  //}, 250);
 });
 
 //color change function
