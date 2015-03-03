@@ -8,6 +8,20 @@
 </head>
 
 <body>
+	<div><a href="#picker"><img src="images/picker.png" height="32" width="32"></img></a></div>
+	
+	<div id="picker" class="colorPickerWindow">
+		<div>
+			<a href="#close" class="close">X</a>
+			<div class='color' onclick="colorChange('blue')" id='blue'></div>
+			<div class='color' onclick="colorChange('green')" id='green'></div>
+			<div class='color' onclick="colorChange('red')" id='red'></div>
+			<div class='color' onclick="colorChange('purple')" id='purple'></div>
+			<div class='color' onclick="colorChange('orange')" id='orange'></div>
+			<div class='color' onclick="colorChange('magenta')" id='magenta'></div>
+		</div>
+	</div>
+	
 	<form class="grid" id="clearElement">
 		<p class="button-display">
 			<input type="text" name="res" id="res" class="input-display">
@@ -16,11 +30,7 @@
 			</button>
 		</p>
 		<table align="center">
-			<td width= 50><div class='color' onclick="colorChange('blue')" id='blue'></div></td>
-			<td width= 50><div class='color' onclick="colorChange('green')" id='green'></div></td>
 			<td><div><img src="images/operations.png" id="swipeElement"></img></div></td>
-			<td width= 50><div class='color' onclick="colorChange('red')" id='red'></div></td>
-			<td width= 50><div class='color' onclick="colorChange('purple')" id='purple'></div></td>
 		</table>	
 			
 		<p class="button-display">
@@ -76,6 +86,19 @@
 			this.style.webkitAnimation = 'none';
 			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
 		});
+		$('#orange').click(function() {
+			$(this).addClass('colorAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		$('#magenta').click(function() {
+			$(this).addClass('colorAnimation');
+			var button = this;
+			this.style.webkitAnimation = 'none';
+			setTimeout(function() {button.style.webkitAnimation = '';}, 0);
+		});
+		
 		//Equals Function Interaction
 		$('#swipeElement').click(function() {
 			$(this).addClass('buttonAnimation');
