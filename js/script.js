@@ -24,9 +24,9 @@ function clearAll() {
   }, 250);
 }
 
-function evaluate() {
+function calc() {
   setTimeout(function() {
-    e();
+	e();
   }, 250);
 }
 
