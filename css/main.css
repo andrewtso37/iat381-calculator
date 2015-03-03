@@ -109,7 +109,7 @@ input, button{
 	border-radius: 50px;
 	border: 4px;
 	border-style: solid;
-	border-color: transparent;
+	border-color: #FFFFFF;
 	outline: 0;
 	display: inline-block;
 }
