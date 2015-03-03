@@ -1,7 +1,7 @@
 // calculation functions
 function s(v) { document.getElementById('res').value = v }
 function a(v) { document.getElementById('res').value += v }
-function e() { try { s(eval(document.getElementById('res').value)) } catch(e) { s('Error') } }
+function e() { try { s(eval(document.getElementById('res').value))} catch(e) { s('Error') } }
 
 // backspace button
 function backspace() {
@@ -37,9 +37,9 @@ mc.on('swiperight', function(e) {
 });
 
 mc.on('tap', function(ev) {
-  setTimeout(function() {
-    swipeElement.textContent = e();
-  }, 250);
+	setTimeout(function() {
+		swipeElement.textContent = e();
+	}, 250);
 });
 
 // hammer js pinch
