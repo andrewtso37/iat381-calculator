@@ -153,6 +153,12 @@ input, button{
 	box-shadow: 1px 1px 3px #000;
 }
 
+#pickerIcon {
+	position: fixed;
+	bottom: 10px;
+	z-index: 2;
+}
+
 .blue {
 	background: linear-gradient(#000000, #0C106F);
 }
